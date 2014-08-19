@@ -1,7 +1,5 @@
 package com.greatbooks.BookOne.util.inter;
 
-import com.greatbooks.BookOne.util.inter.Book;
-
 public abstract class Screen {
 
     protected final Book book;

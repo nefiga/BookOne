@@ -56,7 +56,7 @@ public abstract class AndroidBook extends Activity implements Book {
     }
 
     @Override
-    public Input input() {
+    public Input getInput() {
         return input;
     }
 

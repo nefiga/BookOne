@@ -2,7 +2,7 @@ package com.greatbooks.BookOne.util.inter;
 
 public interface Book{
 
-    public Input input();
+    public Input getInput();
 
     public FileIO getFileIO();
 
