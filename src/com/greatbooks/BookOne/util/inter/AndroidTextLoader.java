@@ -32,6 +32,8 @@ public class AndroidTextLoader {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            buffer.close();
+            reader.close();
         } catch (IOException e) {
             throw new RuntimeException("Couldn't load text " + fileName);
         }

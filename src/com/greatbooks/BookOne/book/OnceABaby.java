@@ -23,7 +23,6 @@ public class OnceABaby extends Book{
     @Override
     public void openBook(Graphics g) {
         pageText = AndroidTextLoader.loadText("once_a_baby.txt", pages);
-        System.out.println("Working");
     }
 
     @Override
