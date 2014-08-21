@@ -7,9 +7,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import com.greatbooks.BookOne.util.inter.*;
 
-public abstract class AndroidBook extends Activity implements Book {
+public abstract class AndroidMain extends Activity implements Main {
 
     AndroidRenderView renderView;
+    AndroidTextLoader textLoader;
     Graphics graphics;
     Audio audio;
     Input input;
@@ -31,6 +32,7 @@ public abstract class AndroidBook extends Activity implements Book {
         float scaleY = (float) frameBufferHeight / getWindowManager().getDefaultDisplay().getHeight();
 
         renderView = new AndroidRenderView(this, frameBuffer);
+        textLoader = new AndroidTextLoader(getAssets());
         graphics = new AndroidGraphics(getAssets(), frameBuffer);
         fileIO = new AndroidFileIO(this);
         audio = new AndroidAudio(this);

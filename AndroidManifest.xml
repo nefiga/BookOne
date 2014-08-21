@@ -5,7 +5,7 @@
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="10"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-        <activity android:name=".BookStart"
+        <activity android:name="com.greatbooks.BookOne.util.StartApp"
                   android:label="@string/app_name"
                 android:screenOrientation="landscape">
             <intent-filter>

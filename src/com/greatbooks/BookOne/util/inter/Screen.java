@@ -2,10 +2,10 @@ package com.greatbooks.BookOne.util.inter;
 
 public abstract class Screen {
 
-    protected final Book book;
+    protected final Main main;
 
-    public Screen(Book book) {
-        this.book = book;
+    public Screen(Main main) {
+        this.main = main;
     }
 
     public abstract void update(float deltaTime);

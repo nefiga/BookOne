@@ -8,13 +8,13 @@ import android.view.SurfaceView;
 
 public class AndroidRenderView extends SurfaceView implements Runnable{
 
-    AndroidBook book;
+    AndroidMain book;
     Bitmap frameBuffer;
     Thread renderThread = null;
     SurfaceHolder holder;
     volatile boolean running = false;
 
-    public AndroidRenderView(AndroidBook book, Bitmap frameBuffer) {
+    public AndroidRenderView(AndroidMain book, Bitmap frameBuffer) {
         super(book);
         this.book = book;
         this.frameBuffer = frameBuffer;

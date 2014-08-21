@@ -1,6 +1,6 @@
 package com.greatbooks.BookOne.util.inter;
 
-public interface Book{
+public interface Main {
 
     public Input getInput();
 

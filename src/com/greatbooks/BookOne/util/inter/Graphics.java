@@ -1,5 +1,7 @@
 package com.greatbooks.BookOne.util.inter;
 
+import android.graphics.Canvas;
+
 public interface Graphics {
 
     public static enum PixmapFormat {
@@ -9,6 +11,8 @@ public interface Graphics {
     public Pixmap newPixmap(String fileName, PixmapFormat format);
 
     public void clear(int color);
+
+    public void drawString(String string, int x, int y, int size, int color);
 
     public void drawPixel(int x, int y, int color);
 
