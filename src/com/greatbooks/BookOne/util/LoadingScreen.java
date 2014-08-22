@@ -25,6 +25,7 @@ public class LoadingScreen extends Screen{
 
         Assets.emtpy_book = g.newPixmap("empty_book.png", Graphics.PixmapFormat.RGB565);
         Assets.once_a_baby = g.newPixmap("once_a_baby.png", Graphics.PixmapFormat.RGB565);
+        Assets.grandmas_do = g.newPixmap("grandmas_do.png", Graphics.PixmapFormat.RGB565);
 
         Assets.home = g.newPixmap("home.png", Graphics.PixmapFormat.ARGB8888);
         Assets.sound = g.newPixmap("sound.png", Graphics.PixmapFormat.ARGB8888);

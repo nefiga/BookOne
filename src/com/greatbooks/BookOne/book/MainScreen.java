@@ -24,14 +24,14 @@ public class MainScreen extends Screen {
     /**
      * Used to hide buttons after no touchEvents have occurred after the set period of time
      */
-    float buttonTimer, hideButtons = 4;
+    float buttonTimer, hideButtons = 2;
 
     int bookOffset;
 
     /**
      * The bounds of the books
      */
-    private final int[][] bookSlots = new int[][] {
+    private final int[][] bookSlots = new int[][]{
             {85, 140, 150, 200},
             {245, 140, 150, 200},
             {405, 140, 150, 200},
@@ -41,9 +41,9 @@ public class MainScreen extends Screen {
     /**
      * Bounds for the buttons
      */
-    private final int[] back = new int[]{30, 220, 100, 100};
-    private final int[] forward = new int[]{700, 220, 100, 100};
-    private final int[] home = new int[]{700, 0, 100, 100};
+    private final int[] back = new int[]{5, 140, 75, 200};
+    private final int[] forward = new int[]{720, 140, 75, 200};
+    private final int[] home = new int[]{20, 20, 65, 65};
 
     public MainScreen(Main main) {
         super(main);
@@ -83,7 +83,8 @@ public class MainScreen extends Screen {
         else {
             for (int i = 0; i < 4; i++) {
                 int bookPosition = i + bookOffset;
-                if (bookHolder.getBook(bookPosition) != null) g.drawPixmap(bookHolder.getBook(bookPosition).getCover(), bookSlots[i][0], bookSlots[i][1]);
+                if (bookHolder.getBook(bookPosition) != null)
+                    g.drawPixmap(bookHolder.getBook(bookPosition).getCover(), bookSlots[i][0], bookSlots[i][1]);
                 else g.drawPixmap(Assets.emtpy_book, bookSlots[i][0], bookSlots[i][1]);
             }
         }
@@ -117,8 +118,7 @@ public class MainScreen extends Screen {
                     }
                 }
             }
-        }
-        else {
+        } else {
             //Home button
             if (inBounds(event, home[0], home[1], home[2], home[3])) {
                 reading = false;
@@ -138,8 +138,7 @@ public class MainScreen extends Screen {
     public void back() {
         if (reading) {
             bookHolder.getCurrentBook().previousPage();
-        }
-        else {
+        } else {
             bookOffset--;
             if (bookOffset < 0) bookOffset = 0;
         }
@@ -151,8 +150,7 @@ public class MainScreen extends Screen {
     public void forward() {
         if (reading) {
             bookHolder.getCurrentBook().nextPage();
-        }
-        else {
+        } else {
             if (bookHolder.getBook(bookOffset + 3) != null) {
                 bookOffset++;
             }
@@ -181,7 +179,11 @@ public class MainScreen extends Screen {
     }
 
     public void loadBooks() {
-        bookHolder.addBook(new OnceABaby("OnceABaby", Assets.once_a_baby, 20));
+        for (int i =0; i < 3; i++) {
+            bookHolder.addBook(new OnceABaby("OnceABaby", Assets.once_a_baby, 20));
+            bookHolder.addBook(new GrandmasDo("GrandmasDo", Assets.grandmas_do, 14));
+        }
+
     }
 
     @Override

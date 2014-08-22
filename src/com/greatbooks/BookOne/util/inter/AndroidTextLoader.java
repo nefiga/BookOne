@@ -20,7 +20,7 @@ public class AndroidTextLoader {
         StringBuilder stringBuilder = new StringBuilder();
 
         try {
-            is = assetManager.open(fileName);
+            is = assetManager.open("text/" + fileName);
             InputStreamReader reader = new InputStreamReader(is);
             BufferedReader buffer = new BufferedReader(reader);
 

@@ -6,6 +6,7 @@ public class Assets {
 
     public static Pixmap emtpy_book;
     public static Pixmap once_a_baby;
+    public static Pixmap grandmas_do;
 
     public static Pixmap background;
 

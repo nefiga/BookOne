@@ -1,0 +1,32 @@
+package com.greatbooks.BookOne.book;
+
+import com.greatbooks.BookOne.util.inter.AndroidTextLoader;
+import com.greatbooks.BookOne.util.inter.Graphics;
+import com.greatbooks.BookOne.util.inter.Pixmap;
+
+public class GrandmasDo extends Book{
+
+    public GrandmasDo(String name, Pixmap cover, int pages) {
+        super(name, cover, pages);
+    }
+
+    @Override
+    public void update() {
+
+    }
+
+    @Override
+    public void render(Graphics g) {
+        renderText(g);
+    }
+
+    @Override
+    public void openBook(Graphics g) {
+        pageText = AndroidTextLoader.loadText("grandmas_do.txt", pages);
+    }
+
+    @Override
+    public void closeBook() {
+
+    }
+}

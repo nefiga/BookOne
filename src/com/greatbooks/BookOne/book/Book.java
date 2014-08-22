@@ -18,7 +18,7 @@ public abstract class Book {
 
     protected final int textColor = Color.BLACK;
 
-    protected int[] textBox = new int[] {20, 400, 760, 200};
+    protected int[] textBox = new int[] {20, 490, 760, 200};
 
     Pixmap cover;
 
@@ -46,7 +46,8 @@ public abstract class Book {
         String[] lines = pageText[currentPage].split("_");
 
         for (int i= 0; i < lines.length; i++) {
-            g.drawString(lines[i], textBox[0], textBox[1] + (textSize * i), textSize, textColor);
+            int yOffset = (textSize * i) - (lines.length * textSize);
+            g.drawString(lines[i], textBox[0], textBox[1] + yOffset, textSize, textColor);
         }
     }
 
